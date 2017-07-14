@@ -79,6 +79,9 @@ a {
     }
     }
 
+#nav {
+    text-align: left;
+}
 /*
     Form Input
     Styles for the form input and button
@@ -146,7 +149,7 @@ a {
         margin: 0 10px 0 69px; }
 
     #add-new input[type="date"] { /*text entering fields */
-        width: 532px; 
+        width: 500px; 
         float: left; 
         margin: 0 10px 0 69px; }
 
