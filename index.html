@@ -1,48 +1,64 @@
 <!doctype html>
 <html lang="en-US">
 	<head>
-		<meta charset="utf-8">
+		<meta chttp-equiv="Content-Type" content="text/html charset=utf-8"/>
 		<title>Backpack <!-- Do Something cool here --> </title>
 		<meta name="viewport" content="width=device-width, initiail-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico"> 
 		<link rel="stylesheet" type="text/css" href="assets/styles.css"/> 
+		<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
 	</head> <!-- like import -->
+
 	<body>
-		<header>
-			<h1><a>Backpack </a></h1> <!--title shows up here -->
-			<nav> <!-- navigation links -->
-				<a href="#">Help</a>
-				<a href="#">My Trips</a>
-				<a href="#">Inspiration</a>
-		</nav>
-		</header>
+		<div id="page-wrap">
+			<div id="header">
+				<h1><a>Backpack </a></h1> <!--title shows up here -->
+				<div id="nav"> <!-- navigation links -->
+					<a href="#">Help</a>
+					<a href="#">My Trips</a>
+					<a href="#">Inspiration</a>
+				</div>
+				<div id="control">
+					<!--IF LOGGED IN -->
+					<p><a href="/logout.js" class="button">Log Out</a> <a href="/account.js" class="button">Your Account</a></p>
+					<!-- IF LOGGED OUT -->
+					<p><a class="button" href="/signup.js">Sign up</a> &nbsp; <a class="button" href="/login.js">Log in</a></p>
+				</div>
+			</div>
+		</div>
 
 		
 
-		<main> <!-- unique to document -->
+		<div id="main"> <!-- unique to document -->
 			<!-- input -->
-		    <form class="submit">
-		        <input type="url" placeholder="Trip Name"/>
+			<!-- IF LOGGED IN -->
+
+			<!-- IF LOGGED OUT -->
+		    <form action=""id="add-new">
+		        <input type="text" placeholder="Trip Name"/>
 		        <button type="submit">ENTER</button>
 		    </form> 
-		    <form class="submit">
+		    <form action="" id="add-new">
 		    	Departure Date:
-		        <input type="date" name="Departure Date" min="today"><br>
+		        <input type="date" name="Departure Date"><br>
 		        <button type="submit">ENTER</button>
 		    </form> 
-		    <form class="submit">
+
+		    <form action="" id="add-new">
 		        Return Date:
 		        <input type="date" name="Return Date"><br>
 		        <button type="submit">ENTER</button>
 		    </form>   
 		    <!-- ./input -->
-			<form action="" id="add-new">
-				<div>
-					<input type="text" id="new-list-item-text" name="new-list-item-text" />
-					<input type="submit" id="add-new-submit" value="Add" class="button" />
-				</div>
-			</form>
-			<dl>Day One</dl>
+		
+			<dl>
+				<form action="" id="add-new">
+						<div>
+							<input type="submit" id="add-new-submit" value="Add Day" class="button" />
+						</div>
+					</form>
+			</dl>
+			<!-- IF AT LEAST ONE DAY -->
 				<dd>
 					<form action="" id="add-new">
 						<div>
@@ -51,113 +67,16 @@
 						</div>
 					</form>
 				</dd>
-			<dl>Day Two</dl>
-				<dd>
-					<form action="" id="add-new">
-						<div>
-							<input type="text" id="new-list-item-text" name="new-list-item-text" />
-							<input type="submit" id="add-new-submit" value="Add" class="button" />
-						</div>
-					</form>
-				</dd>
-			<dl>Day Three</dl>
-				<dd>
-					<form action="" id="add-new">
-						<div>
-							<input type="text" id="new-list-item-text" name="new-list-item-text" />
-							<input type="submit" id="add-new-submit" value="Add" class="button" />
-						</div>
-					</form>
-				</dd>
-			<dl>Day Four</dl>
-				<dd>
-					<form action="" id="add-new">
-						<div>
-							<input type="text" id="new-list-item-text" name="new-list-item-text" />
-							<input type="submit" id="add-new-submit" value="Add" class="button" />
-						</div>
-					</form>
-				</dd>
-			<!-- <li class="colorRed">
-				<span>Day One</span>
-				<div class="draggertab tab"></div>  may not want tthese for days, but maybe only for activities underneath 
-				<div class="colortab tab"></div>
-				<div class="deletetab tab"></div>
-				<div class="donetab tab"></div>
-			</li> 
-			<li class="colorBlue">
-				<span>Day Two</span>
-				<div class="draggertab tab"></div>
-				<div class="colortab tab"></div>
-				<div class="deletetab tab"></div>
-				<div class="donetab tab"></div>
-			</li>
-			<li class="colorGreen">
-				<span>Day Three</span>
-				<div class="draggertab tab"></div>
-				<div class="colortab tab"></div>
-				<div class="deletetab tab"></div>
-				<div class="donetab tab"></div>
-			</li>
-			<li class="colorYellow">
-				<span>Day Four</span>
-				<div class="draggertab tab"></div>
-				<div class="colortab tab"></div>
-				<div class="deletetab tab"></div>
-				<div class="donetab tab"></div>
-			</li>
-			<li class="colorPurple">
-				<span>Day Five</span>
-				<div class="draggertab tab"></div>
-				<div class="colortab tab"></div>
-				<div class="deletetab tab"></div>
-				<div class="donetab tab"></div>
-			</li>
-			<li class="colorPink">
-				<span>Day Six</span>
-				<div class="draggertab tab"></div>
-				<div class="colortab tab"></div>
-				<div class="deletetab tab"></div>
-				<div class="donetab tab"></div>
-			</li> 
-			<dd>Charlotte
-				<dl>
-					<dt> Flight 10pm </dt>
-				</dl>
-			</dd>  
-			<dt>7/2</dt>
-			<dd>Paris
-				<dl>
-					<dt> Arrive 7am </dt>
-					<dt> Hotel </dt>
-						<dd> Confirmation # </dd>
-					<dt> Eiffel Tower </dt>
-					<dt> Louvre </dt>
-						<dd> ticket time: 3pm </dd>
-			</dd>
-			<dt>7/3</dt>
-			<dd>London</dd>
-			<dt>7/4</dt>
-			<dd>London</dd>
-			<dt>7/5</dt>
-			<dd>Dublin</dd>
-			<dt>7/6</dt>
-			<dt>7/7</dt>
-			<dd>Charlotte</dd>
-		</dl> -->
-		    
-		    <!-- output -->
-		    <div class="wrapper">
-		        <div class="content">
-		            <p><strong>WORDS, i.e.</strong> <a href="https://itunes.apple.com/us/app/twitter/id333903271?mt=8">https://itunes.apple.com/us/app/twitter/id333903271?mt=8</a></p>
-		            <img src="assets/img/icon-placeholder.svg" alt="Icon placeholder" />
-		        </div>
-		    </div>
-		    <!-- ./output -->
-		</main>
- 
+			
+			<div id="share-area">
+				<p>Public list URL: <a href="#">URL GOES HERE</a>
+				<small>(Invite friends to look at your lost or contribute)</small></p>
+			<
 
-		<footer></footer>
+
+		<footer>
+			<!-- Analytics here -->
+		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="assets/js/main.js"></script>
 	</body>
