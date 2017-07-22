@@ -27,31 +27,26 @@ body {
     font-size: 1em;
     line-height: 1.5;
     font-family: Lucida Grande, sans-serif;
-    max-width: 43.75em; /* 880/16 */
+    max-width: 43.75em; 
     margin: 0 auto;
     padding: 0;
     color: #4A4A4A;
-}
- /*
-img {
-    max-width: 100%;
-    height: auto;    
 }
  
 a {
     color: inherit;
 }
-*/
+
 /*
     Header Styles
 */
+
 #header {
     margin: 1em 0 2em;
     color: #196E76;
-    font-family: 'Pacifico', serif;
 }
  
-    #header h1 {
+    #header h1 { /*Backpack*/
         font-family: 'Pacifico', serif;
         font-size: 3em; 
         text-shadow: 0 4px 2px rgba(0, 0, 0, .1);
@@ -61,31 +56,61 @@ a {
 
     #header h2 { /*Title Page*/
         font-family: 'Pacifico', serif;
-        font-size: 3em; 
+        font-size: 2em; 
         text-shadow: 0 4px 2px rgba(0, 0, 0, .1);
-        margin: 0;
+        margin: 1;
         text-align: center;
     }
- 
-        /*#header h1 a {
-            text-decoration: none;
-            text-align: center;
-        }*/
 
     #header p {
-        margin-top: .5em;
+        margin-top: 0;
         text-indent: 0; /* indent slightly */
         text-shadow: 0 1px 0px rgba(0, 0, 0, .15);
         font-size: .875em; /* 14/16 */
         text-align: center;
-    #control {
+    }
+
+    #title {
         width: 500px;
         float: right;
         padding: 10px 237px 0 0;
         text-align: right;
-    }
+    
+
+    .hero-image{
+        background-image: url("photographer.jpg")
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 
+    .hero-text{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        }
+
+    button.hero-text {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 10px 25px;
+      color: black;
+      background-color: #ddd;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #hero-text button:hover {
+      background-color: #555;
+      color: white;
+    }
+}
 #nav {
     text-align: left;
 }
